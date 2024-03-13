@@ -28,7 +28,9 @@ class gui:
         'p':'P',
         'z':'Z',
         'x':'X',
-        'c':'C'}
+        'c':'C',
+        'comma':'G',
+        'period':'T'}
         self.presetScript = ["0","1","2","3","4","5","6","7","8","9"]
 
         # place holder for the dictionary so we can write it to the json file
@@ -145,7 +147,7 @@ class gui:
         # Prompts the user if they want to save and saves their answer 
         saver = tk.messagebox.askyesno(message = "Do you wanna save the recorded inputs?")
 
-        # If they did not want to save they would send the script normally
+        # If they did not want to save they would sund the script normally
         # If they did want to save it would run the sensavScript function
         if not saver:
             for act in self.script:

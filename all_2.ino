@@ -3,15 +3,15 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <string.h>
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
-const char *ssid = "NETGEAR74";
-const char *password = "blacklotus235";
+const char *ssid = "Put your network name on here";
+const char *password = "Put your WiFi password here";
 WiFiClient client;
 #define SERVOMIN 130   // This is the 'minimum' pulse length count (out of 4096)
 #define SERVOMAX 400   // This is the 'maximum' pulse length count (out of 4096)
 #define USMIN 600      // This is the rounded 'minimum' microsecond length based on the minimum pulse of 150
 #define USMAX 2400     // This is the rounded 'maximum' microsecond length based on the maximum pulse of 600
 #define SERVO_FREQ 50  // Analog servos run at ~50 Hz updates
-const char *serverIP = "192.168.1.2";
+const char *serverIP = "Put your local IP address here";
 const int serverPort = 8080;
 
 enum ANIMATRONIC { IDLE,

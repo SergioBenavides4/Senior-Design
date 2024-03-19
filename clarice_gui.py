@@ -27,28 +27,29 @@ class gui:
         'o':'O',
         'p':'P',
         'z':'Z',
+        
         'x':'X',
-        'c':'C',
-        'comma':'G',
-        'period':'T'}
+        'c':'C'}
         self.presetScript = ["0","1","2","3","4","5","6","7","8","9"]
 
         # place holder for the dictionary so we can write it to the json file
-        self.dictScript = {
-            "0":["L","R"],
-            "1":["U","D"], 
-            "2":["U","L"],
-            "3":["U","R"],
-            "4":["U","D"],
-            "5":["L","U"],
-            "6":["D","U"],
-            "7":["U","R"],
-            "8":["R","L"],
-            "9":["R","D"]
-           }
+        with open("scriptList.json",'r') as f:
+            self.dictScript = json.load(f)
+        # self.dictScript = {
+        #     "0":["L","R"],
+        #     "1":["U","D"], 
+        #     "2":["U","L"],
+        #     "3":["U","R"],
+        #     "4":["U","D"],
+        #     "5":["L","U"],
+        #     "6":["D","U"],
+        #     "7":["U","R"],
+        #     "8":["R","L"],
+        #     "9":["R","D"]
+        #    }
 
         # The server IP and PORT for server
-        self.IP = '192.168.1.2'
+        self.IP = '192.168.4.22'
         self.PORT = 8080
 
         # # Make the server socket and bind it witht he IP and PORT
